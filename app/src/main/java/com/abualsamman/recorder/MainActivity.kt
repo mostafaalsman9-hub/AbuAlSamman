@@ -1,3 +1,6 @@
+import android.media.MediaRecorder
+import android.os.Handler
+import android.os.Looper
 package com.abualsamman.recorder
 
 import android.Manifest
@@ -25,6 +28,8 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
+private var testRecorder: MediaRecorder? = null
+private val handler = Handler(Looper.getMainLooper())
 class MainActivity : ComponentActivity() {
 
     private lateinit var statusText: TextView
